@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#2196F3">
@@ -9,16 +10,7 @@
     <!-- CSS  -->
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-   
-    <!-- <script src="functions/index.js"></script> -->
   
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-
-    <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-
-    <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
      <script src="js/application.js"></script>
 </head>
 <body id="top" class="scrollspy" style="overflow-x:hidden">
@@ -347,7 +339,7 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix white-text"></i>
-                            <input id="icon_prefix" name="name" type="text" class="validate white-text" id="name">
+                            <input id="name" name="name" type="text" class="validate white-text" id="name">
                             <label for="icon_prefix" class="white-text">Name</label>
                         </div>
                         <div class="input-field col s6">
@@ -357,12 +349,12 @@
                         </div>
                         <div class="input-field col s12">
                             <i class="mdi-editor-mode-edit prefix white-text"></i>
-                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text" id="message"></textarea>
+                            <textarea id="message" name="message" class="materialize-textarea white-text" id="message"></textarea>
                             <label for="icon_prefix2" class="white-text">Message</label>
                         </div>
                        
                         <div class="col offset-s7 s5">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                            <button class="btn waves-effect waves-light red darken-1" type="submit" id="submit">Submit
                                 <i class="mdi-content-send right white-text"></i>
                             </button>
                         </div>
@@ -422,7 +414,19 @@
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
 
-
+<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDEbCELVEhU87FItKBf-UPJhEaC3S_WY",
+    authDomain: "sarnar-c3d73.firebaseapp.com",
+    databaseURL: "https://sarnar-c3d73.firebaseio.com",
+    projectId: "sarnar-c3d73",
+    storageBucket: "sarnar-c3d73.appspot.com",
+    messagingSenderId: "376063013488"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
     </body>
